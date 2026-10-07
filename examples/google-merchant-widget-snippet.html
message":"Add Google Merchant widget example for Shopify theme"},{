@@ -1,0 +1,21 @@
+<script id="merchantWidgetScript" src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var script = document.getElementById('merchantWidgetScript');
+
+    if (!script) return;
+
+    script.addEventListener('load', function () {
+      if (window.merchantwidget) {
+        window.merchantwidget.start({
+          merchant_id: 5719580694,
+          position: 'TOP_RIGHT',
+          region: 'US'
+        });
+      } else {
+        console.warn('Google Merchant Widget failed to load.');
+      }
+    });
+  });
+</script>
